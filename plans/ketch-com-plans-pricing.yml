@@ -1,0 +1,155 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Ketch
+providerId: ketch-com
+created: '2026-05-25'
+modified: '2026-05-25'
+reconciled: true
+tags:
+  - Privacy
+  - Consent
+  - DSR
+  - CMP
+description: |
+  Reconciled plans and pricing for Ketch privacy management software. Metering is driven by monthly
+  unique users seeing the Ketch privacy experience plus integration count. Source: ketch.com/pricing.
+sources:
+  - https://www.ketch.com/pricing
+  - https://www.ketch.com/ketch-free-cookie-banner
+plans:
+  - id: ketch-free
+    name: Free
+    type: free
+    description: Free CMP tier for small businesses with basic privacy banner needs. Up to 5k unique users per month and 2 integrations.
+    entries:
+      - label: Unique users
+        name: unique_users
+        type: included
+        metric: users
+        limit: 5000
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+      - label: Integrations
+        name: integrations
+        type: included
+        metric: integrations
+        limit: 2
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+      - label: Email support
+        name: support_email
+        type: included
+        metric: support
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+  - id: ketch-starter
+    name: Starter
+    type: paid
+    description: For moderate traffic websites and apps. 30k unique users per month, billed monthly.
+    entries:
+      - label: Monthly subscription
+        name: subscription
+        type: flat
+        metric: subscription
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '150.00'
+        userMultiplied: false
+      - label: Unique users
+        name: unique_users
+        type: included
+        metric: users
+        limit: 30000
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+      - label: Integrations
+        name: integrations
+        type: included
+        metric: integrations
+        limit: 2
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+  - id: ketch-plus
+    name: Plus
+    type: paid
+    description: For high traffic websites and apps. 100k unique users per month, billed annually. Live onboarding call included.
+    entries:
+      - label: Monthly subscription (billed annually)
+        name: subscription
+        type: flat
+        metric: subscription
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '499.00'
+        userMultiplied: false
+      - label: Unique users
+        name: unique_users
+        type: included
+        metric: users
+        limit: 100000
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+      - label: Integrations
+        name: integrations
+        type: included
+        metric: integrations
+        limit: 2
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+  - id: ketch-pro
+    name: Pro
+    type: custom
+    description: Mid-market plan with a custom quote. Expanded integrations, DSR automation, and platform features.
+    entries:
+      - label: Custom quote
+        name: subscription
+        type: custom
+        metric: subscription
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: 'contact-sales'
+        userMultiplied: false
+  - id: ketch-enterprise
+    name: Enterprise
+    type: custom
+    description: Enterprise tier with full Ketch platform, custom integrations, and dedicated support.
+    entries:
+      - label: Custom quote
+        name: subscription
+        type: custom
+        metric: subscription
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: 'contact-sales'
+        userMultiplied: false

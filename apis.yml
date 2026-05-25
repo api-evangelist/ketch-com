@@ -1,0 +1,328 @@
+aid: ketch-com
+url: https://raw.githubusercontent.com/api-evangelist/ketch-com/refs/heads/main/apis.yml
+name: Ketch
+kind: company
+description: |
+  Ketch is a San Francisco-based data permissioning and consent management platform — known as Ketch
+  Switchbit — that helps enterprises keep customer data clean, permissioned, and AI-ready across web,
+  mobile, and backend systems. The platform spans consent management, data subject rights (DSR)
+  automation, AI-powered data mapping, marketing preference management, risk and reporting, a Data
+  Sentry privacy pentest, and an AI Governance layer. The Ketch Agent Network turns privacy program
+  insights into agent-driven actions. Builders use a public REST API hosted at global.ketchapi.com,
+  Web/iOS/Android SDKs published across the github.com/ketch-com and github.com/ketch-sdk orgs, a
+  Google Tag Manager template, a React Native module, and event forwarders for Node, Go, and Java.
+  Ketch advertises 1,000+ pre-built API integrations across analytics, CRM, CDP, ecommerce, marketing,
+  tag management, and data warehouses, with a free cookie banner tier alongside paid mid-market and
+  enterprise editions.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Privacy
+  - Consent
+  - Data Permissioning
+  - DSR
+  - Data Mapping
+  - AI Governance
+  - Preference Management
+  - Risk
+  - GDPR
+  - CCPA
+  - CPRA
+  - Switchbit
+created: '2026-05-25'
+modified: '2026-05-25'
+specificationVersion: '0.20'
+apis:
+  - aid: ketch-com:ketch-platform-api
+    name: Ketch Platform API
+    description: |
+      REST API for the Ketch platform, powering consent collection and enforcement, data subject rights
+      workflows, data mapping, preference management, and risk reporting. Endpoints are served from
+      global.ketchapi.com and include the Harbormaster authentication and OAuth service used by
+      integrations. Webhooks and a 1,000+ catalog of pre-built integrations connect downstream systems
+      to consent and DSR events.
+    humanURL: https://docs.ketch.com/
+    baseURL: https://global.ketchapi.com
+    tags:
+      - Consent
+      - DSR
+      - Preferences
+      - Data Mapping
+      - Webhooks
+      - REST
+    properties:
+      - type: Documentation
+        url: https://docs.ketch.com/
+      - type: APIReference
+        url: https://docs.ketch.com/ketch/reference
+      - type: Integrations
+        url: https://www.ketch.com/integrations
+      - type: SourceCode
+        url: https://github.com/ketch-com
+      - type: SourceCode
+        url: https://github.com/ketch-sdk
+      - type: SignUp
+        url: https://www.ketch.com/ketch-free-cookie-banner
+      - type: Pricing
+        url: https://www.ketch.com/pricing
+      - type: Status
+        url: https://status.ketch.com/
+      - type: Blog
+        url: https://www.ketch.com/blog
+      - type: Plans
+        url: plans/ketch-com-plans-pricing.yml
+      - type: RateLimits
+        url: rate-limits/ketch-com-rate-limits.yml
+      - type: FinOps
+        url: finops/ketch-com-finops.yml
+    features:
+      - name: Consent Management
+        description: Collect, store, and enforce consumer privacy choices across web, mobile, and backend channels and jurisdictions.
+      - name: DSR Automation
+        description: Build and run data subject request workflows with drag-and-drop automation for access, deletion, and correction.
+      - name: AI-Powered Data Mapping
+        description: Discover systems and visualize data footprints across the enterprise with AI assistance.
+      - name: Marketing Preference Management
+        description: Let customers select preferences across communications and channels, including progressive consent.
+      - name: Risk and Reporting
+        description: Real-time data insights and assessment workflows for privacy and risk teams.
+      - name: Data Sentry
+        description: Privacy pentest that scans websites for trackers, vulnerabilities, and non-compliant tags.
+      - name: AI Governance
+        description: Enforce human intent and oversight over which customer data flows into AI training and inference.
+      - name: Identity Management
+        description: Identity stitching across devices and browsers for consistent consent enforcement.
+      - name: Agent Network
+        description: Agent-driven actions that turn privacy program insights into automated remediation across the stack.
+      - name: 1,000+ Pre-Built Integrations
+        description: Catalog of pre-built API integrations across analytics, CRM, CDP, ecommerce, marketing, tag managers, and warehouses.
+    useCases:
+      - name: Cookie Banner and Web Consent
+        description: Drop a Ketch consent experience onto a website with the free cookie banner or a branded enterprise experience.
+      - name: Mobile App Consent
+        description: Use the iOS and Android SDKs to collect and enforce consent in native mobile apps.
+      - name: DSR Fulfillment at Scale
+        description: Automate intake and fulfillment of access, deletion, and correction requests across hundreds of internal systems.
+      - name: AI Permissioning
+        description: Govern which customer data can be used for AI training, fine-tuning, and inference workloads.
+      - name: GTM Consent Mode
+        description: Use the Ketch Google Tag Manager template to gate GTM tag firing based on visitor consent.
+      - name: Website Tracker Scanning
+        description: Continuously scan public web properties for non-compliant cookies and trackers via Data Sentry.
+    integrations:
+      - name: Google Tag Manager
+      - name: Google Consent Mode
+      - name: Tealium
+      - name: Segment
+      - name: Adobe Analytics
+      - name: Salesforce
+      - name: HubSpot
+      - name: Snowflake
+      - name: BigQuery
+      - name: AWS
+      - name: GCP
+      - name: Azure
+      - name: Meta
+      - name: TikTok
+      - name: Slack
+    authentication:
+      - type: OAuth
+        description: OAuth flow handled by the Harbormaster service at global.ketchapi.com for integrations and documentation access.
+      - type: API Key
+        description: API key authentication for server-side integrations against the Ketch platform.
+  - aid: ketch-com:ketch-web-sdk
+    name: Ketch Web SDK
+    description: |
+      TypeScript and JavaScript Web API and consent library for collecting, storing, and enforcing
+      consent in browser environments. Includes the ketch-web-api client, the ketch-consent library,
+      a typed ketch-types package, ketch-data-layer, and ketch-logging. Distributed across the
+      github.com/ketch-sdk org.
+    humanURL: https://github.com/ketch-sdk
+    tags:
+      - Web
+      - JavaScript
+      - TypeScript
+      - SDK
+      - Consent
+    properties:
+      - type: SourceCode
+        url: https://github.com/ketch-sdk/ketch-web-api
+      - type: ConsentLibrary
+        url: https://github.com/ketch-sdk/ketch-consent
+      - type: SourceCode
+        url: https://github.com/ketch-sdk/ketch-types
+      - type: SourceCode
+        url: https://github.com/ketch-sdk/ketch-data-layer
+      - type: SourceCode
+        url: https://github.com/ketch-sdk/ketch-logging
+      - type: Documentation
+        url: https://docs.ketch.com/
+    features:
+      - name: Bootstrap Configuration
+        description: Fetch and apply per-property consent configuration at page load.
+      - name: Consent Retrieval
+        description: Read current consent state for the visitor across categories and purposes.
+      - name: Branded Consent Experiences
+        description: Render branded consent UIs that match site theming via the ketch-consent library.
+      - name: Data Layer
+        description: ketch-data-layer normalizes events between Ketch and analytics platforms.
+    useCases:
+      - name: Web Cookie Consent
+        description: Power compliant cookie banners and preference centers on web properties.
+      - name: Tag Firing Control
+        description: Gate analytics and marketing tags based on visitor consent.
+      - name: Server-Side Forwarding
+        description: Pair the Web SDK with an event forwarder to relay consented events to downstream systems.
+    integrations:
+      - name: Google Tag Manager
+      - name: Tealium
+      - name: Segment
+      - name: Adobe Analytics
+    authentication:
+      - type: Property Code
+        description: Web SDK is configured per Ketch property using a property code rather than a secret API key.
+  - aid: ketch-com:ketch-mobile-sdks
+    name: Ketch Mobile SDKs
+    description: |
+      Native iOS (Swift) and Android (Kotlin) SDKs plus a React Native module and a CocoaPods wrapper
+      example for collecting and enforcing consent inside mobile applications. The iOS SDK supports
+      iOS 15 and above; the Android SDK targets API level 26 and above. WebView-based consent
+      management and DSR submission are supported.
+    humanURL: https://github.com/ketch-com
+    tags:
+      - Mobile
+      - iOS
+      - Android
+      - React Native
+      - SDK
+      - Consent
+    properties:
+      - type: iOS
+        url: https://github.com/ketch-com/ketch-ios
+      - type: Android
+        url: https://github.com/ketch-com/ketch-android
+      - type: ReactNative
+        url: https://github.com/ketch-com/ketch-react-native
+      - type: SourceCode
+        url: https://github.com/ketch-com/KetchSDKWrapperCocoaPod
+      - type: Documentation
+        url: https://docs.ketch.com/
+    features:
+      - name: Preemptive Consent Collection
+        description: Capture consent before tracking SDKs activate inside the app.
+      - name: WebView Consent and DSR
+        description: Use the WebView component for consent management and DSR submission.
+      - name: Identity Stitching
+        description: Maintain a consistent consent state across mobile and web identities.
+      - name: React Native Bridge
+        description: Wrap the native iOS and Android SDKs for use in React Native apps.
+    useCases:
+      - name: iOS App Consent
+        description: Comply with App Tracking Transparency and regional regulations in iOS apps.
+      - name: Android App Consent
+        description: Drive consent collection and enforcement for Android apps.
+      - name: Cross-Platform Mobile Consent
+        description: Share a single consent surface across iOS, Android, and React Native codebases.
+    integrations:
+      - name: Firebase
+      - name: AppsFlyer
+      - name: Adjust
+    authentication:
+      - type: Property Code
+        description: Configured per property using a property code; calls are authenticated against the Ketch backend.
+  - aid: ketch-com:ketch-event-forwarders
+    name: Ketch Event Forwarders
+    description: |
+      Server-side event forwarder specification and reference implementations that relay consent and
+      DSR events from Ketch to downstream systems. Reference implementations are available in Go
+      (go-ketch-forwarder), Java (java-ketch-forwarder), and Node/Express (express-ketch-forwarder).
+    humanURL: https://github.com/ketch-com/ketch-forwarder
+    tags:
+      - Server-Side
+      - Webhooks
+      - Forwarder
+      - Go
+      - Java
+      - Node
+    properties:
+      - type: Specification
+        url: https://github.com/ketch-com/ketch-forwarder
+      - type: SourceCode
+        url: https://github.com/ketch-com/go-ketch-forwarder
+      - type: SourceCode
+        url: https://github.com/ketch-com/java-ketch-forwarder
+      - type: SourceCode
+        url: https://github.com/ketch-com/express-ketch-forwarder
+    features:
+      - name: Spec-Driven Implementations
+        description: A single Ketch Forwarder specification with reference implementations across languages.
+      - name: Server-Side Event Relay
+        description: Receive Ketch events server-side and relay them to downstream tools, warehouses, and AI systems.
+    useCases:
+      - name: Server-Side Consent Propagation
+        description: Push consent and DSR signals from Ketch into internal systems via a forwarder.
+      - name: Warehouse Sync
+        description: Forward consent events into Snowflake, BigQuery, and other warehouses for analytics.
+    authentication:
+      - type: Webhook Secret
+        description: Forwarders validate Ketch event signatures using a configured secret.
+  - aid: ketch-com:ketch-cli
+    name: Ketch CLI
+    description: |
+      Ketch command line interface, written in Go, for operating against Ketch infrastructure and
+      developer workflows.
+    humanURL: https://github.com/ketch-com/ketch-cli
+    tags:
+      - CLI
+      - Go
+      - Tools
+    properties:
+      - type: SourceCode
+        url: https://github.com/ketch-com/ketch-cli
+    features:
+      - name: Developer CLI
+        description: Command line surface for Ketch developer workflows.
+  - aid: ketch-com:ketch-tag-manager-templates
+    name: Ketch Tag Manager Templates
+    description: |
+      Tag manager templates that route consent state from Ketch into common tag platforms — the
+      Ketch GTM consent mode template and the Ketch <> Tealium consent template.
+    humanURL: https://github.com/ketch-com/gtm-consent-mode
+    tags:
+      - GTM
+      - Tealium
+      - Consent
+      - Tag Manager
+    properties:
+      - type: SourceCode
+        url: https://github.com/ketch-com/gtm-consent-mode
+      - type: SourceCode
+        url: https://github.com/ketch-com/tealium-consent-template
+    features:
+      - name: GTM Consent Mode
+        description: Google Tag Manager template that maps Ketch consent state to GTM consent signals.
+      - name: Tealium Consent
+        description: Tealium iQ template that maps Ketch consent state into Tealium tag firing logic.
+common:
+  - type: Website
+    url: https://www.ketch.com/
+  - type: Documentation
+    url: https://docs.ketch.com/
+  - type: APIReference
+    url: https://docs.ketch.com/ketch/reference
+  - type: SourceCode
+    url: https://github.com/ketch-com
+  - type: SourceCode
+    url: https://github.com/ketch-sdk
+  - type: Pricing
+    url: https://www.ketch.com/pricing
+  - type: Integrations
+    url: https://www.ketch.com/integrations
+  - type: Blog
+    url: https://www.ketch.com/blog
+  - type: Status
+    url: https://status.ketch.com/
+  - type: Careers
+    url: https://www.ketch.com/careers
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

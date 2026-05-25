@@ -1,0 +1,97 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: Ketch
+providerId: ketch-com
+created: '2026-05-25'
+modified: '2026-05-25'
+reconciled: true
+tags:
+  - FinOps
+  - Cost Management
+  - FOCUS
+  - Privacy
+  - SaaS
+description: |
+  FOCUS-aligned FinOps definition for Ketch privacy management software. Ketch is a subscription
+  SaaS billed monthly or annually with seat-independent metering based on monthly unique users seeing
+  the consent experience, plus integration counts and module entitlements (DSR, data mapping, AI
+  governance, Data Sentry).
+sources:
+  - https://www.ketch.com/pricing
+  - https://www.ketch.com/integrations
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: Ketch
+serviceCategory: Security and Compliance
+billingModel:
+  pricingCategory: Subscription
+  billingFrequency: Monthly
+  billingCurrency: USD
+  chargeCategories:
+    - Usage
+    - Purchase
+    - Tax
+    - Adjustment
+  primaryUnit: unique_user_month
+  secondaryUnits:
+    - integration
+    - dsr_request
+    - property
+focusColumns:
+  ServiceName: Ketch Privacy Management
+  ServiceCategory: Security and Compliance
+  ProviderName: Ketch
+  PublisherName: Ketch
+  InvoiceIssuerName: Ketch
+  PricingCategory: Subscription
+  PricingUnit: unique_user_month
+  BillingCurrency: USD
+meters:
+  - name: monthly_unique_users
+    unit: unique_user
+    aggregation: distinct_count
+    dimensions:
+      - property
+      - jurisdiction
+      - plan
+  - name: integrations_active
+    unit: integration
+    aggregation: count
+    dimensions:
+      - integration_type
+      - property
+  - name: dsr_requests
+    unit: request
+    aggregation: count
+    dimensions:
+      - request_type
+      - jurisdiction
+  - name: data_systems_mapped
+    unit: system
+    aggregation: count
+    dimensions:
+      - system_type
+costAllocation:
+  tags:
+    - property
+    - jurisdiction
+    - business_unit
+    - module
+  recommendations: |
+    Allocate Ketch spend by property (domain/app) for marketing teams, by jurisdiction for legal/
+    compliance teams, and by module (CMP, DSR, Data Mapping, AI Governance, Data Sentry) for
+    privacy program reporting.
+optimizationLevers:
+  - name: Right-size plan
+    description: Match the plan tier (Free / Starter / Plus / Pro / Enterprise) to actual monthly unique users seeing the privacy experience.
+  - name: Annual billing
+    description: Plus and higher tiers are billed annually; commit to a year for the published price.
+  - name: Consolidate integrations
+    description: Stay within the 2 included integrations on lower tiers; add more only when business value is clear.
+  - name: Module entitlements
+    description: Disable modules (Data Mapping, AI Governance, Data Sentry) that the business is not actively using.

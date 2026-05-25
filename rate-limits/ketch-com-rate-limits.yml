@@ -1,0 +1,54 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Ketch
+providerId: ketch-com
+created: '2026-05-25'
+modified: '2026-05-25'
+reconciled: false
+tags:
+  - Rate Limiting
+  - Privacy
+  - Consent
+description: |
+  Rate limit posture for the Ketch Platform API at global.ketchapi.com. Ketch does not publish a
+  fine-grained public rate limit schedule; the plan-level limit that drives metering is the monthly
+  unique-user count (5k Free, 30k Starter, 100k Plus, custom Pro/Enterprise). Server-side API calls
+  are governed by Harbormaster auth and standard abuse protections.
+sources:
+  - https://www.ketch.com/pricing
+  - https://docs.ketch.com/
+headers:
+  retryAfter: retry-after
+responseCodes:
+  throttled: 429
+  quotaExceeded: 429
+algorithm: undocumented
+spendLimits:
+  - tier: Free
+    creditPurchase: N/A
+    monthlyCap: 5000 unique users / month
+  - tier: Starter
+    creditPurchase: '$150 / month'
+    monthlyCap: 30000 unique users / month
+  - tier: Plus
+    creditPurchase: '$499 / month'
+    monthlyCap: 100000 unique users / month
+  - tier: Pro
+    creditPurchase: custom
+    monthlyCap: custom
+  - tier: Enterprise
+    creditPurchase: custom
+    monthlyCap: custom
+limits:
+  - tier: All paid tiers
+    surface: Platform REST API (global.ketchapi.com)
+    rpm: undocumented
+    notes: |
+      Ketch does not publish per-key request-per-minute limits. Consent collection from the Web/iOS/
+      Android SDKs is gated by the plan's monthly unique-user allowance rather than per-second RPS
+      quotas. Excess traffic is renegotiated with sales rather than 429'd.
+  - tier: Free
+    surface: Free cookie banner
+    rpm: undocumented
+    notes: Hard cap is 5,000 unique users / month and 2 integrations.
