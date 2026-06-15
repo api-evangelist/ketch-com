@@ -2,6 +2,13 @@
   "repo": "ketch-com",
   "feeds": [
     {
+      "source": "https://www.ketch.com/blog",
+      "feed_url": "https://www.ketch.com/blog",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
       "source": "https://status.ketch.com/",
       "feed_url": "https://status.ketch.com/history.atom",
       "title": "",
@@ -17,5 +24,5 @@
     }
   ],
   "post_count": 0,
-  "fetched": "2026-06-01T23:35:02Z"
+  "fetched": "2026-06-14T20:42:17Z"
 }
